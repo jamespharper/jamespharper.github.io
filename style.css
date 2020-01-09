@@ -1,11 +1,25 @@
 /* global */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* page layout */
+.grid-harper{
+    display: grid;
+    grid-template-columns: 40px 500px auto 40px;
+    grid-template-rows: 200px 800px auto
+    grid-column-gap: 0px;
+}
+
 .grid-2{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 0px;
 }
 
+
+
+
+
+/* text */
 body{
     margin: 0;
     padding: 0;
@@ -22,32 +36,90 @@ a{
     color: #7A7C80;
     text-decoration: none;
 }
+
+
+
+
+
+/* navigation bar */
+#navbar { /* Style the navbar */
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a { /* Navbar links */
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.content { /* Page content */
+  padding: 16px;
+}
+
+.sticky { /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content { /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  padding-top: 60px;
+}
+
+.navbar-right { /* Right-aligned section inside the top navigation */
+  float: right;
+}
+
+/* images */
+
+
+
+
+
 /* section 1 */
 .section-1{
-    padding-top: 40vh;
-    padding-left: 20vw;
-    text-align: center;
+  padding-top: 30px;
+  /* padding-left: 20vw; */
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .section-1 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  margin:0;
 }
 
 .section-1 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
 }
 
 .section-1 a{
-    font-size: 1.5rem;
-    padding: 10px;
+  font-size: 1.5rem;
+  padding: 10px;
 }
+
+
+
+
+
+
 /* section 2 */
 .section-2{
-    padding-top: 20vh;
-    width: 70%;
+  padding-top: 30px;
+  /* width: 70%; */
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .section-2 h2{
@@ -68,7 +140,50 @@ a{
     padding-left: 0;
     width: 100px;
 }
+
+
+
+
+/* section 3 */
+.section-3{
+  padding-top: 30px;
+  /* width: 70%; */
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.section-3 h2{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-3 p{
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin:0;
+}
+
+.section-3 a{
+    display: block;
+    padding: 5px;
+    font-size: 1.2rem;
+    padding-left: 0;
+    width: 100px;
+}
+
+
+
+
+
 /* animations / utilities */
+.section-1 a:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 .section-2 a:hover{
     font-size: 1.3rem;
     color: #fff;
@@ -76,16 +191,21 @@ a{
     transition: 0.2s;
 }
 
-.section-1 a:hover{
+.section-3 a:hover{
+    font-size: 1.3rem;
     color: #fff;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .white:hover{
     position: relative;
     padding-left: 10px;
 }
+
+
+
+
 
 /* media queres */
 @media(max-width:780px){
