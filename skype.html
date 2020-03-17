@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+<div id='skype_status'></div>
+<script src="./skype_status.packed.js" type="text/javascript"></script>
+<script>
+var sk = new skype_status("skype_status", {
+        /***************************************
+        * Your skype username
+        * Multiple usernames can be provided in array
+        * to create multi user chat, conference call, etc
+        * but only first user will be used to get online status
+        ****************************************/
+        skype_name: "ar2rsawseen",
+        /***************************************
+        * Possible types of images:
+        * balloon          - Balloon style 
+        * bigclassic       - Big Classic Style 
+        * smallclassic     - Small Classic Style 
+        * smallicon        - Small Icon (transparent background) 
+        * mediumicon       - Medium Icon 
+        * dropdown-white   - Dropdown White Background 
+        * dropdown-trans   - Dropdown Transparent Background
+        ****************************************/
+        image: "balloon",
+        /***************************************
+        * Possible types of actions:
+        * ""          - Empty, no action. 
+        * call        - Call to user
+        * chat        - Open chat window
+        * add         - Add to skype
+        * userinfo    - Open user profile 
+        * voicemail   - Leave voicemail (Only if you have voicemail subscription) 
+        * sendfile    - Send file to user 
+        ****************************************/
+        action: "call",
+        //how often to recheck skype status in miliseconds
+        update: 10000
+    }
+);
+</script>
+</body>
+</html>
